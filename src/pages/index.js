@@ -1,16 +1,22 @@
 import * as React from 'react';
+import styled from 'styled-components';
+
+import Layout from '../components/layout';
+import Projects from '../components/projects';
+
+// styled components
+const HeadingStyled = styled.h1`
+	margin-top: 256px;
+	margin-bottom: 304px;
+	/* max-width: 540px; */
+
+	// active when browser window is 600px or smaller
+	@media only screen and (max-width: 600px) {
+		margin-top: 128px;
+	}
+`;
 
 // styles
-const pageStyles = {
-	color: '#232129',
-	padding: '96px',
-	fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-	marginTop: 0,
-	marginBottom: 64,
-	maxWidth: 420,
-};
 const headingAccentStyles = {
 	color: '#663399',
 };
@@ -94,20 +100,20 @@ const links = [
 // markup
 const IndexPage = () => {
 	return (
-		<main style={pageStyles}>
+		<Layout>
 			<title>Home Page</title>
-			<h1 style={headingStyles}>
+			<HeadingStyled>
 				Hi my name is Anicia
 				<br />
 				<span style={headingAccentStyles}>
 					Welcome to my portfolio website!{' '}
 				</span>
 				<span role='img' aria-label='Party popper emojis'>
-					🎉🎉🎉
+					🎉
 				</span>
-			</h1>
-
-			<ul style={listStyles}>
+			</HeadingStyled>
+			<Projects />
+			{/* <ul style={listStyles}>
 				<li style={docLinkStyle}>
 					<a style={linkStyle} target='_blank' href={docLink.url}>
 						{docLink.text}
@@ -123,8 +129,8 @@ const IndexPage = () => {
 						</span>
 					</li>
 				))}
-			</ul>
-		</main>
+			</ul> */}
+		</Layout>
 	);
 };
 
