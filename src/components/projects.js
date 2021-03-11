@@ -8,8 +8,8 @@ const DivStyled = styled.div`
 	display: flex;
 	justify-content: space-between;
 
-	// active when browser window is 600px or smaller
-	@media only screen and (max-width: 600px) {
+	// active when browser window is 768px or smaller
+	@media only screen and (max-width: 768px) {
 		flex-direction: column;
 	}
 `;
@@ -17,8 +17,8 @@ const ProjectColumnStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	// active when browser window is 600px or smaller
-	@media only screen and (max-width: 600px) {
+	// active when browser window is 768px or smaller
+	@media only screen and (max-width: 768px) {
 		align-items: center;
 	}
 `;
